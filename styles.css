@@ -1,0 +1,170 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Garamond", serif;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #00274C;
+}
+
+.timer {
+  position: relative;
+  margin: auto;
+  height: 300px;
+  width: 300px;
+}
+
+#countdown-number {
+  position: static;
+  top: 0;
+  width: 300px;
+  height: 300px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+}
+
+svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 300px;
+  height: 300px;
+  transform: rotateY(-180deg) rotateZ(-90deg);
+}
+
+#circle1 {
+  stroke-dasharray: 282.7px;
+  stroke-dashoffset: 0px;
+  stroke-linecap: round;
+  stroke-width: 7px;
+  stroke: green;
+  fill: none;
+  animation: countdown 60s linear infinite forwards;
+}
+
+#circle2 {
+  fill: none;
+  stroke: none;
+  stroke-width: 7px;
+  stroke: #fff;
+}
+
+@keyframes countdown {
+  from {
+    stroke-dashoffset: 0px;
+  }
+
+  to {
+    stroke-dashoffset: 282.7px;
+  }
+}
+
+.app {
+  background-color: #ff8e2b;
+  width: 90%;
+  max-width: 800px;
+  margin: 10px auto;
+  border-radius: 10px;
+  padding: 30px;
+}
+
+.app h1 {
+  font-size: 35px;
+  color: #280003;
+  font-weight: 600;
+  border-bottom: 1px solid #333;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+.quiz {
+  padding: 20px 0;
+}
+
+.quiz h2 {
+  font-size: 25px;
+  color: #280003;
+  font-weight: 600;
+}
+
+.options-grid {
+  display: grid;
+  grid-template-columns: repeat(2, auto);
+  margin: 5px 5px 5px;
+  border-radius: 10px;
+  padding: 5px 5px 5px;
+  justify-content: space-around;
+}
+
+.btn {
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  color: #222;
+  font-weight: 500;
+  font-size:20px;
+  width: 300px;
+  border: 1px solid #222;
+  padding: 30px 25px;
+  margin: 10px 0;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.btn img {
+  width: 45px;
+  height: auto;
+  margin-right: 10px;
+  pointer-events: none;
+}
+
+.btn:hover:not([disabled]) {
+  background: #222;
+  color: #fff;
+}
+
+.btn:disabled {
+  cursor: no-drop;
+}
+
+#next-btn {
+  background: #001e4d;
+  color: #fff;
+  font-weight: 500;
+  width: 150px;
+  border: 0;
+  padding: 10px;
+  margin: 20px auto 0;
+  border-radius: 4px;
+  cursor: pointer;
+  display: none;
+}
+
+.correct {
+  background: lightgreen;
+}
+
+.incorrect {
+  background: #ff9393;
+}
+
+.progress-bar {
+  width: 100%;
+  background-color: #ddd;
+  height: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.progress {
+  width: 0%;
+  height: 100%;
+  background-color: #4caf50;
+  border-radius: 10px;
+}

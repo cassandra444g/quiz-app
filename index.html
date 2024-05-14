@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Tuffy's Titan Trivia</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <div class="timer">
+    <div id="countdown-number"></div>
+    <svg>
+      <circle id="circle2" cx="150" cy="150" r="45"></circle>
+      <circle id="circle1" cx="150" cy="150" r="45"></circle>
+    </svg>
+  </div>
+
+  <div class="app">
+    <h1>Tuffy's Titan Trivia</h1>
+    <div class="quiz">
+      <h2 id="question">Question goes here</h2>
+      <div id="answer-buttons" class="options-grid">
+        <button class="btn">
+          <img src="icons/orange.svg" alt="Orange Icon" /> Answer 1
+        </button>
+        <button class="btn">
+          <img src="icons/apple.svg" alt="Apple Icon" /> Answer 2
+        </button>
+        <button class="btn">
+          <img src="icons/strawberry.svg" alt="Strawberry Icon" /> Answer 3
+        </button>
+        <button class="btn">
+          <img src="icons/banana.svg" alt="Banana Icon" /> Answer 4
+        </button>
+      </div>
+      <div class="progress-bar">
+        <div class="progress"></div>
+      </div>
+
+      <button id="next-btn">Next</button>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+
+</html>
